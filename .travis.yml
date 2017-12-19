@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - 9
+dist: trusty
+sudo: false
+env: IMPRESS_MODE=test
+services:
+  - mongodb
+install:
+  - npm install
+  - npm install mongodb
+script:
+  - npm test
