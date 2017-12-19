@@ -1,0 +1,8 @@
+node_modules
+config
+*.log
+*.done
+.DS_Store
+*.min.js
+*.min.js.map
+applications/*/files/

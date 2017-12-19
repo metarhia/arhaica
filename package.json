@@ -1,0 +1,15 @@
+{
+  "name": "arhaica",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Arhaica Content Management System",
+  "dependencies": {
+    "geoip-lite": "^1.2.1",
+    "impress": "^0.4.29",
+    "mongodb": "^2.2.33",
+    "nodemailer": "^4.4.1"
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  }
+}
