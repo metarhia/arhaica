@@ -2,11 +2,11 @@
 
 1. Install nodejs
 ```
-dnf -y update
-dnf -y install psmisc
-dnf -y groupinstall "Development Tools"
-curl --silent --location https://rpm.nodesource.com/setup_9.x | bash -
-dnf -y install nodejs
+sudo dnf -y update
+sudo dnf -y install psmisc
+sudo dnf -y groupinstall "Development Tools"
+sudo curl --silent --location https://rpm.nodesource.com/setup_9.x | bash -
+sudo dnf -y install nodejs
 ```
 
 2. Clone project
@@ -28,5 +28,5 @@ npm install
 
 5. Allow port listening below 1024
 ```
-setcap 'cap_net_bind_service=+ep' /path/to/node
+sudo setcap 'cap_net_bind_service=+ep' "$(which node)"
 ```
