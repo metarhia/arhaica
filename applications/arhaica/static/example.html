@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JSTP@0.5 Example</title>
+</head>
+<body>
+  <script src="./js/jstp.min.js"></script>
+  <script>
+    const client = api.jstp.ws.createClient('ws://localhost:3030');
+    const username = null;
+    const password = null;
+    const ifaces = ["interfaceName"];
+    client.connectAndInspect(
+      'arhaica', username, password, ifaces,
+      (error, connection, session, remoteProxy) => {
+        if (error) {
+          alert(error);
+          return;
+        }
+        // take a look at /applications/arhaica/api/interfaceName/methodName.js
+        remoteProxy.interfaceName.methodName(1, 2, 3, (error, result) => {
+          if (error) {
+            alert(error);
+            return;
+          }
+          if (result === 6) {
+            alert('Everething is fine');
+          } else {
+            alert('Somethig went wrong');
+          }
+        });
+      }
+    );
+  </script>
+</body>
+</html>

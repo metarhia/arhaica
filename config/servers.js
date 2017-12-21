@@ -26,6 +26,15 @@
     ports:     [81],
     applications: ['arhaica'],
     heartbeat: '2s'
+  },
+
+  rpc: {
+    protocol:  'jstp',
+    transport: 'ws',
+    address:   '*',
+    ports:     [3030],
+    applications: ['arhaica'],
+    heartbeat: '2s'
   }
 
 }

@@ -30,3 +30,12 @@ npm install
 ```
 sudo setcap 'cap_net_bind_service=+ep' "$(which node)"
 ```
+
+6. Start the server
+```
+./server.sh
+```
+if you skipped 5-th step run this instead
+```
+sudo ./server.sh
+```
